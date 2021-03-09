@@ -5,7 +5,6 @@ import SearchBar from './components/SearchBar';
 import VideoDetail from './components/VideoDetail';
 import VideoList from './components/VideoList';
 import IVideos from './models/videos.interface';
-import { AxiosResponse } from 'axios';
 
 function App() {
   const [videos, setVideos] = useState<IVideos[]>([]);
@@ -22,7 +21,6 @@ function App() {
 };
 
   const handleVideoSelect = (video: IVideos) => {
-    console.log(video);
     setSelectedVideo(video);
 }
 

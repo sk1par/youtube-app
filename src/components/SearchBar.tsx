@@ -5,11 +5,13 @@ const SearchBar = ({handleFormSubmit}: any) => {
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setTerm(e.target.value);
-    
     };
+    
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
-        handleFormSubmit(term);
+        if (term) {
+            handleFormSubmit(term);
+        }
     }
 
     return (
