@@ -6,7 +6,7 @@ const VideoDetail = ({video}: Video) => {
     return <div>
        <h1>Enter search keyword to load...</h1>
        <br></br>
-    </div>;
+    </div>
   }
 
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
