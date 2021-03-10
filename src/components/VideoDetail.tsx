@@ -1,12 +1,19 @@
-import Video from "../models/single-video.interface";
+import { RootStateOrAny, useSelector } from "react-redux";
 
-const VideoDetail = ({video}: Video) => {
-  console.log(video);
-  if (!video) {
-    return <div>
-       <h1>Enter search keyword to load...</h1>
-       <br></br>
+const NoData = () => {
+  return (
+    <div>
+      <h1>Enter search keyword to load...</h1>
+      <br></br>
     </div>
+  )
+};
+
+function VideoDetail(): JSX.Element {
+  const video = useSelector((state: RootStateOrAny) => state.selectedVideo);
+
+  if (Object.keys(video).length === 0) {
+    return <NoData />
   }
 
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;

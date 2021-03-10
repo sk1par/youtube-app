@@ -1,16 +1,17 @@
+import { RootStateOrAny, useSelector } from 'react-redux';
 import IVideos from '../models/videos.interface';
 import VideoItem from './VideoItem';
 
-interface IVideoList {
-    videos: IVideos[];
-    handleVideoSelect: (video: IVideos) => void
-}
+const VideoList = () => {
+    const videos = useSelector((state: RootStateOrAny) => state.videos);
 
-const VideoList = ({videos , handleVideoSelect}: IVideoList) => {
-    const renderedVideos =  videos.map((video: IVideos) => {
-        return <VideoItem key={video.id.videoId} video={video} handleVideoSelect={handleVideoSelect} />
-    });
 
-    return <div className='ui relaxed divided list'>{renderedVideos}</div>;
+    return (
+        videos.length > 0 ? <div className='ui relaxed divided list'>
+            {videos.map((video: IVideos) =>
+                <VideoItem key={video.id.videoId} video={video} />
+            )}
+        </div> : null
+    )
 };
 export default VideoList;
