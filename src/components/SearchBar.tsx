@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import allActions from '../actions';
+import { videosActions } from '../actions';
 import youTubeApi from '../api/youtube';
 
 
@@ -21,7 +21,7 @@ const SearchBar = () => {
                 }
             });
 
-            dispatch(allActions.videosActions(response.data.items));
+            dispatch(videosActions(response.data.items));
         }
     };
 

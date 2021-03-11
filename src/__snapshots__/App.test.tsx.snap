@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="ui container"
+  style={
+    Object {
+      "marginTop": "1em",
+    }
+  }
+>
+  <SearchBar />
+  <div
+    className="ui grid"
+  >
+    <div
+      className="ui row"
+    >
+      <div
+        className="seven wide column"
+      >
+        <VideoDetail />
+      </div>
+      <div
+        className="four wide column"
+      >
+        <History />
+      </div>
+      <div
+        className="five wide column"
+      >
+        <VideoList />
+      </div>
+    </div>
+  </div>
+</div>
+`;

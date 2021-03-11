@@ -1,9 +1,10 @@
-import { RootStateOrAny, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import IVideos from '../models/videos.interface';
+import { allVideos } from '../selectors/selectors';
 import VideoItem from './VideoItem';
 
 const VideoList = () => {
-    const videos = useSelector((state: RootStateOrAny) => state.videos);
+    const videos = useSelector(allVideos);
 
 
     return (

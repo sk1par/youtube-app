@@ -1,4 +1,5 @@
-import { RootStateOrAny, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
+import { selectedVideo } from "../selectors/selectors";
 
 const NoData = () => {
   return (
@@ -10,7 +11,7 @@ const NoData = () => {
 };
 
 function VideoDetail(): JSX.Element {
-  const video = useSelector((state: RootStateOrAny) => state.selectedVideo);
+  const video = useSelector(selectedVideo);
 
   if (Object.keys(video).length === 0) {
     return <NoData />

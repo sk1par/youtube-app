@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
-import allActions from '../actions';
+import {history} from '../actions';
+import selectedVideo from '../actions/selectedVideoActions';
 import IVideos from '../models/videos.interface';
 
 interface VideosProps {
@@ -10,8 +11,8 @@ const VideoItem = ({video }: VideosProps) => {
     const dispatch = useDispatch();
 
     const selectVideo = (video: IVideos) => {
-        dispatch(allActions.selectedVideo(video));
-        dispatch(allActions.history(video));
+        dispatch(selectedVideo(video));
+        dispatch(history(video));
     }
 
     return (

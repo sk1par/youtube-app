@@ -1,11 +1,3 @@
-import history from './historyActions';
-import videosActions from './videosActions';
-import selectedVideo from './selectedVideoActions';
-
-const allActions = {
-    history,
-    videosActions,
-    selectedVideo
-};
-
-export default allActions;
+export { default as history } from './historyActions';
+export { default as videosActions } from './videosActions';
+export { default as selectedVideo} from './selectedVideoActions';
