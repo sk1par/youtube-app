@@ -16,9 +16,9 @@ const VideoItem = ({video }: VideosProps) => {
     }
 
     return (
-        <div onClick={() => selectVideo(video)} className='video-item item'>
+        <div onClick={() => selectVideo(video)} className='video-item item' data-auto-id="video-div">
             <img className='ui image' src={video.snippet.thumbnails.medium.url} alt={video.snippet.description}/>
-            <div className='content'>
+            <div className='content' data-auto-id="item-video">
                 <div className='header '>{video.snippet.title}</div>
             </div>
         </div>

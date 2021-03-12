@@ -3,7 +3,7 @@ import { selectedVideo } from "../selectors/selectors";
 
 const NoData = () => {
   return (
-    <div>
+    <div data-auto-id="search-keyword-div">
       <h1>Enter search keyword to load...</h1>
       <br></br>
     </div>
@@ -17,15 +17,15 @@ function VideoDetail(): JSX.Element {
     return <NoData />
   }
 
-  const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
+  const videoSrc = `https://www.youtube.com/embed/${video.id?.videoId}`;
   return (
-    <div>
+    <div data-auto-id="video-details-div">
       <div className="ui embed">
         <iframe src={videoSrc} allowFullScreen title="Video player" />
       </div>
       <div className="ui segment">
-        <h4 className="ui header">{video.snippet.title}</h4>
-        <p>{video.snippet.description}</p>
+        <h4 className="ui header">{video.snippet?.title}</h4>
+        <p>{video.snippet?.description}</p>
       </div>
     </div>
   );

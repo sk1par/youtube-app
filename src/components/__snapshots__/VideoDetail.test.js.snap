@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render search keyword div 1`] = `
+<VideoDetail>
+  <NoData>
+    <div
+      data-auto-id="search-keyword-div"
+    >
+      <h1>
+        Enter search keyword to load...
+      </h1>
+      <br />
+    </div>
+  </NoData>
+</VideoDetail>
+`;
+
+exports[`should render video detail div 1`] = `
+<div
+  data-auto-id="video-details-div"
+>
+  <div
+    className="ui embed"
+  >
+    <iframe
+      allowFullScreen={true}
+      src="https://www.youtube.com/embed/1"
+      title="Video player"
+    />
+  </div>
+  <div
+    className="ui segment"
+  >
+    <h4
+      className="ui header"
+    >
+      test
+    </h4>
+    <p>
+      test
+    </p>
+  </div>
+</div>
+`;

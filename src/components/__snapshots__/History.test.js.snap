@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should display no results content 1`] = `
+<Fragment>
+  <div
+    className="button"
+    data-auto-id="history-title"
+  >
+    <h1>
+      History
+    </h1>
+  </div>
+  <div>
+    <p
+      className="button"
+      data-auto-id="no-results"
+    >
+      No recent history
+    </p>
+  </div>
+</Fragment>
+`;
+
+exports[`should receive obj after click 1`] = `
+<Fragment>
+  <div
+    className="button"
+    data-auto-id="history-title"
+  >
+    <h1>
+      History
+    </h1>
+  </div>
+  <div>
+    <p
+      className="link"
+      data-auto-id="item"
+      key="1"
+      onClick={[Function]}
+    >
+      test
+    </p>
+  </div>
+</Fragment>
+`;
+
+exports[`should render correctly 1`] = `
+<Fragment>
+  <div
+    className="button"
+    data-auto-id="history-title"
+  >
+    <h1>
+      History
+    </h1>
+  </div>
+  <div>
+    <p
+      className="button"
+      data-auto-id="no-results"
+    >
+      No recent history
+    </p>
+  </div>
+</Fragment>
+`;
+
+exports[`should render multiple items 1`] = `
+<Fragment>
+  <div
+    className="button"
+    data-auto-id="history-title"
+  >
+    <h1>
+      History
+    </h1>
+  </div>
+  <div>
+    <p
+      className="link"
+      data-auto-id="item"
+      key="1"
+      onClick={[Function]}
+    >
+      test
+    </p>
+    <p
+      className="link"
+      data-auto-id="item"
+      key="1"
+      onClick={[Function]}
+    >
+      test
+    </p>
+  </div>
+</Fragment>
+`;

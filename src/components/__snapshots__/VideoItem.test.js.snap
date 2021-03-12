@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should add video obj to history 1`] = `
+<div
+  className="video-item item"
+  data-auto-id="video-div"
+  onClick={[Function]}
+>
+  <img
+    alt="test"
+    className="ui image"
+    src="test"
+  />
+  <div
+    className="content"
+    data-auto-id="item-video"
+  >
+    <div
+      className="header "
+    >
+      test
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should receive obj after click 1`] = `
+<div
+  className="video-item item"
+  data-auto-id="video-div"
+  onClick={[Function]}
+>
+  <img
+    alt="test"
+    className="ui image"
+    src="test"
+  />
+  <div
+    className="content"
+    data-auto-id="item-video"
+  >
+    <div
+      className="header "
+    >
+      test
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render single video div 1`] = `
+<div
+  className="video-item item"
+  data-auto-id="video-div"
+  onClick={[Function]}
+>
+  <img
+    alt="test"
+    className="ui image"
+    src="test"
+  />
+  <div
+    className="content"
+    data-auto-id="item-video"
+  >
+    <div
+      className="header "
+    >
+      test
+    </div>
+  </div>
+</div>
+`;

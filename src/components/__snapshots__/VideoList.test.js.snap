@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<div
+  className="ui relaxed divided list"
+  data-auto-id="list-component"
+>
+  <VideoItem
+    key="1"
+    video={
+      Object {
+        "id": Object {
+          "videoId": "1",
+        },
+        "snippet": Object {
+          "description": "test",
+          "thumbnails": Object {
+            "medium": Object {
+              "url": "test",
+            },
+          },
+          "title": "test",
+        },
+      }
+    }
+  />
+</div>
+`;
