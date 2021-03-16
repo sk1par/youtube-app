@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import SearchBar from './SearchBar';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import { shallowToJson } from 'enzyme-to-json';
 import videosActions from '../actions/videosActions';
@@ -15,6 +15,13 @@ jest.mock('../actions/videosActions', () => {
     const videosActions = jest.fn();
     return videosActions;
 });
+
+jest.mock("../api/youtube", () => {
+    const videos = [ getVideo() ];
+    return {
+      get: jest.fn(() => Promise.resolve(videos))
+    };
+  });
 
 const getVideo = () => ({
     id: {
@@ -39,13 +46,13 @@ it('should render correctly search div', () => {
     expect(shallowToJson(wrapper)).toMatchSnapshot();
 });
 
-it.only('should trigger videos action correctly after submit', () => {
-    const v = getVideo();
-    useSelector.mockReturnValueOnce([v]);
-    const wrapper = shallow(<SearchBar />);
-    const button = wrapper.find('[data-auto-id="submit-button"]');
-    button.simulate('click');
-    expect(videosActions).toHaveBeenCalledTimes(1);
+it('should trigger videos action correctly after submit', () => {
+    const wrapper = mount(<SearchBar />);
+    const inputText = wrapper.find('[data-auto-id="input-field"]');
+    inputText.simulate('change', { target: { value: 'ruse' } });
+    const searchButton = wrapper.find('[data-auto-id="submit-button"]');
+    searchButton.simulate('click');
+    expect(videosActions).toHaveBeenCalledWith('ruse');
     expect(shallowToJson(wrapper)).toMatchSnapshot();
 });
 

@@ -38,6 +38,7 @@ exports[`should render correctly search div 1`] = `
           Video Search
         </label>
         <input
+          data-auto-id="input-field"
           name="video-search"
           onChange={[Function]}
           placeholder="Search.."
@@ -49,7 +50,8 @@ exports[`should render correctly search div 1`] = `
       >
         <button
           className="ui black basic button"
-          type="submit"
+          data-auto-id="submit-button"
+          onClick={[Function]}
         >
           Search
         </button>
@@ -60,7 +62,7 @@ exports[`should render correctly search div 1`] = `
 `;
 
 exports[`should trigger videos action correctly after submit 1`] = `
-<Fragment>
+<SearchBar>
   <h2
     style={
       Object {
@@ -97,6 +99,7 @@ exports[`should trigger videos action correctly after submit 1`] = `
           Video Search
         </label>
         <input
+          data-auto-id="input-field"
           name="video-search"
           onChange={[Function]}
           placeholder="Search.."
@@ -116,5 +119,5 @@ exports[`should trigger videos action correctly after submit 1`] = `
       </div>
     </form>
   </div>
-</Fragment>
+</SearchBar>
 `;

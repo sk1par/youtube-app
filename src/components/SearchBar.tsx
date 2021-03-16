@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { videosActions } from '../actions';
-import youTubeApi from '../api/youtube';
 
 
 const SearchBar = () => {
@@ -14,14 +13,9 @@ const SearchBar = () => {
 
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
+        
         if (term) {
-            const response= await youTubeApi.get('/search', {
-                params: {
-                    q: term
-                }
-            });
-
-            dispatch(videosActions(response.data.items));
+            dispatch(videosActions(term));
         }
     };
 
@@ -32,7 +26,7 @@ const SearchBar = () => {
                 <form onSubmit={handleSubmit} className='ui form'>
                     <div className='field'>
                         <label htmlFor="video-search">Video Search</label>
-                        <input onChange={handleChange} name='video-search' type="text" placeholder="Search.."/>
+                        <input onChange={handleChange} name='video-search' type="text" placeholder="Search.." data-auto-id='input-field' />
                     </div>
                     <div className='button'>
                 <button onClick={handleSubmit} className="ui black basic button" data-auto-id="submit-button">Search</button>
